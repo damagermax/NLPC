@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/episodeFragment">
+
+    <fragment
+        android:id="@+id/phoneNumberFragment"
+        android:name="com.example.nlpc.view.PhoneNumberFragment"
+        android:label="Verify your phone number"
+        tools:layout="@layout/fragment_phone_number">
+        <action
+            android:id="@+id/action_phoneNumberFragment_to_verifyOTPFragment"
+            app:destination="@id/verifyOTPFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyOTPFragment"
+        android:name="com.example.nlpc.view.VerifyOTPFragment"
+        android:label="Verify your number"
+        tools:layout="@layout/fragment_verify_o_t_p">
+        <action
+            android:id="@+id/action_verifyOTPFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.nlpc.view.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_listenNowFragment"
+            app:destination="@id/listenNowFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/browseCategoryFragment"
+        android:name="com.example.nlpc.view.browse.BrowseCategoryFragment"
+        android:label="Browse Categories"
+        tools:layout="@layout/fragment_browse_category" >
+        <action
+            android:id="@+id/action_browseCategoryFragment_to_subCategoriesFragment"
+            app:destination="@id/subCategoriesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listenNowFragment"
+        android:name="com.example.nlpc.view.listen_now.ListenNowFragment"
+        android:label="Listen Now"
+        tools:layout="@layout/fragment_listen_now" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.nlpc.view.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.nlpc.view.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/subCategoriesFragment"
+        android:name="com.example.nlpc.view.subcategory.SubCategoriesFragment"
+        android:label="Sub Categories"
+        tools:layout="@layout/fragment_sub_categories" >
+        <action
+            android:id="@+id/action_subCategoriesFragment_to_episodeFragment"
+            app:destination="@id/episodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/episodeFragment"
+        android:name="com.example.nlpc.view.episode.EpisodeFragment"
+        android:label="Episodes"
+        tools:layout="@layout/fragment_episode" />
+</navigation>
