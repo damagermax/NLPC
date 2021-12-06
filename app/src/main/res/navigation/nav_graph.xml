@@ -3,35 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/episodeFragment">
+    app:startDestination="@id/loginFragment">
 
-    <fragment
-        android:id="@+id/phoneNumberFragment"
-        android:name="com.example.nlpc.view.PhoneNumberFragment"
-        android:label="Verify your phone number"
-        tools:layout="@layout/fragment_phone_number">
-        <action
-            android:id="@+id/action_phoneNumberFragment_to_verifyOTPFragment"
-            app:destination="@id/verifyOTPFragment" />
-    </fragment>
     <fragment
         android:id="@+id/verifyOTPFragment"
         android:name="com.example.nlpc.view.VerifyOTPFragment"
         android:label="Verify your number"
-        tools:layout="@layout/fragment_verify_o_t_p">
-        <action
-            android:id="@+id/action_verifyOTPFragment_to_registerFragment"
-            app:destination="@id/registerFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_verify_o_t_p"/>
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.example.nlpc.view.RegisterFragment"
         android:label="Register"
-        tools:layout="@layout/fragment_register" >
-        <action
-            android:id="@+id/action_registerFragment_to_listenNowFragment"
-            app:destination="@id/listenNowFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_register" />
     <fragment
         android:id="@+id/browseCategoryFragment"
         android:name="com.example.nlpc.view.browse.BrowseCategoryFragment"
@@ -70,4 +53,13 @@
         android:name="com.example.nlpc.view.episode.EpisodeFragment"
         android:label="Episodes"
         tools:layout="@layout/fragment_episode" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.nlpc.view.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_listenNowFragment"
+            app:destination="@id/listenNowFragment" />
+    </fragment>
 </navigation>

@@ -42,8 +42,7 @@ class VerifyOTPFragment : Fragment() {
             if (otp.isEmpty()) {
                 requireActivity().showToast("Enter code")
             } else {
-                val action =VerifyOTPFragmentDirections.actionVerifyOTPFragmentToRegisterFragment()
-                findNavController().navigate(action)
+
             }
 
 

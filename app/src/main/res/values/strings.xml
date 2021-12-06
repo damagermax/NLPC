@@ -39,5 +39,8 @@
     <string name="add_episode">ADD EPISODE</string>
     <string name="episode_duration">Episode duration</string>
     <string name="episode_date">Episode date</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
 
 </resources>

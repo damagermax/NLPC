@@ -28,18 +28,18 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 app:endIconMode="clear_text"
-                app:startIconDrawable="@drawable/person_24"
+                app:startIconDrawable="@drawable/email_24"
                 android:layout_height="wrap_content"
                 app:hintTextColor="@color/black"
                 app:boxStrokeColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:inputType="text"
-                    android:id="@+id/userFullNameInput"
+                    android:inputType="textEmailAddress"
+                    android:id="@+id/registerEmailInput"
                     android:lines="1"
                     android:layout_height="wrap_content"
-                    android:hint="@string/full_name" />
+                    android:hint="@string/email" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -48,8 +48,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                app:endIconMode="clear_text"
-                app:startIconDrawable="@drawable/email_24"
+                app:endIconMode="password_toggle"
+                app:startIconDrawable="@drawable/ic_baseline_create_24"
                 app:hintTextColor="@color/black"
                 app:boxStrokeColor="@color/black">
 
@@ -57,9 +57,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:lines="1"
-                    android:id="@+id/userEmailInput"
+                    android:id="@+id/registerPasswordInput"
                     android:inputType="number"
-                    android:hint="@string/phone" />
+                    android:hint="@string/password" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
